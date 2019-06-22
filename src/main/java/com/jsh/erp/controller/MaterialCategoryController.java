@@ -152,6 +152,7 @@ public class MaterialCategoryController {
      */
     @RequestMapping(value = "/batchDeleteMaterialCategory")
     public Object batchDeleteMaterialCategory(@RequestParam("ids") String ids) throws Exception {
+        System.out.println("123");
         JSONObject result = ExceptionConstants.standardSuccess();
         int i= materialCategoryService.batchDeleteMaterialCategoryByIds(ids);
         if(i<1){
